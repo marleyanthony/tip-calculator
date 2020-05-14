@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <title>Tip Calculator</title>
+</head>
+
+<body>
+  <div class="container p-5 mt-5">
+    <h1 class="mb-5">Tip Calculator</h1>
+    <form>
+      <!-- Total Amount -->
+      <div class="form-group">
+        <label for="total-amount">Total Amount</label>
+        <input type="number" class="form-control" id="total-amount" placeholder="0.00">
+        <small id="total-amount-help" class="form-text text-muted">Enter Full Amount of Bill</small>
+      </div>
+      <!-- Tip Percentage -->
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="tip-percentage" id="tip-10" value=".1">
+        <label class="form-check-label" for="tip-percentage">
+          10%
+        </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="tip-percentage" id="tip-15" value=".15">
+        <label class="form-check-label" for="exampleRadios2">
+          15%
+        </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="tip-percentage" id="tip-25" value=".25">
+        <label class="form-check-label" for="exampleRadios3">
+          25%
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary m-2" id="calculate-btn">Calculate</button>
+
+      <div class="row">
+        <div class="col">
+          <!-- Tip Amount (Calculated) -->
+          <label for="calculated-tip">Your Calculated Tip</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">$</div>
+            </div>
+            <input type="number" class="form-control" id="calculated-tip" readonly>
+          </div>
+        </div>
+
+        <div class="col">
+          <!-- Total Amount (Calculated) -->
+          <label for="calculated-total">Your Calculated Total</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">$</div>
+            </div>
+            <input type="number" class="form-control" id="calculated-total" readonly>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <footer class="mt-5"> <small class="text-muted">Coded By: Marley Anthony 🙂</small></footer>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
